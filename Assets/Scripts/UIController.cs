@@ -7,27 +7,16 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
+    private int objectCount;
 
-    private int score;
-    private List<BreakableObject> objects;
-    void Start()
+    public void SetScore(int score)
     {
-        objects = FindObjectsOfType<BreakableObject>().ToList();
-        objects.ForEach(SubscribeToScore);
+        scoreText.text = string.Format("OBJECTS REPAIRED: {0}/{1}", score, objectCount);
     }
 
-    private void SubscribeToScore(BreakableObject obj)
+    public void Setup(int objectCount)
     {
-        obj.ObjectRepaired += AddScore;
-    }
-
-    private void AddScore()
-    {
-        score++;
-    }
-
-    void Update()
-    {
-        scoreText.text = score + "/" + objects.Count;
+        this.objectCount = objectCount;
+        SetScore(0);
     }
 }
