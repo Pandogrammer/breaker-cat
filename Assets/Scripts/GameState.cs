@@ -9,20 +9,37 @@ public class GameState : MonoBehaviour
     [SerializeField] private StartGUIController startGUI;
     [SerializeField] private float doomsday = 10;
     [SerializeField] private Dog dog;
+    [SerializeField] private GameObject breakableObjectPrefab;
     
     private List<BreakableObject> objects;
     private int score;
+    private bool playing;
 
     void Awake()
     {
-        objects = FindObjectsOfType<BreakableObject>().ToList();
-        objects.ForEach(SubscribeToScore);
-        gameplayGUI.Setup(objects.Count, (int)doomsday);
-
-        startGUI.OnStartGame += StartGame;
+        startGUI.OnStartButtonClicked += StartButtonClicked;
+        dog.OnGameStarted += StartGame;
     }
 
     private void StartGame()
+    {
+        InstantiateBreakableObjects();
+        objects = FindObjectsOfType<BreakableObject>().ToList();
+        objects.ForEach(SubscribeToScore);
+        gameplayGUI.Setup(objects.Count, (int)doomsday);
+        playing = true;
+        gameplayGUI.gameObject.SetActive(true);
+    }
+
+    private void InstantiateBreakableObjects()
+    {
+        var position1 = new Vector3(-4f, 6, 0);
+        Instantiate(breakableObjectPrefab, position1, Quaternion.identity);
+        var position2 = new Vector3(0, 3, 0);
+        Instantiate(breakableObjectPrefab, position2, Quaternion.identity);
+    }
+
+    private void StartButtonClicked()
     {
         startGUI.gameObject.SetActive(false);
         dog.StartGame();
@@ -30,6 +47,9 @@ public class GameState : MonoBehaviour
 
     void Update()
     {
+        if (!playing)
+            return;
+        
         CheckDoomsday();
         CheckVictory();
         CheckDefeat();

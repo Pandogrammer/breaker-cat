@@ -47,3 +47,5 @@ MonoBehaviour:
   startGUI: {fileID: 0}
   doomsday: 31
   dog: {fileID: 0}
+  breakableObjectPrefab: {fileID: 4499363911867549543, guid: 2de407ea0c8d3440f8afb180ea847de0,
+    type: 3}
