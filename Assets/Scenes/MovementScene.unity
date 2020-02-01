@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 4499363911867549537, guid: 2de407ea0c8d3440f8afb180ea847de0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.36
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 4499363911867549537, guid: 2de407ea0c8d3440f8afb180ea847de0,
         type: 3}
@@ -292,6 +292,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4772648050164814718, guid: 2de407ea0c8d3440f8afb180ea847de0,
+        type: 3}
+      propertyPath: smokeRangeTimer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de407ea0c8d3440f8afb180ea847de0, type: 3}
 --- !u!1001 &641599712
@@ -301,11 +306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4118438207762142336, guid: 3f9423cddec5f45aab62eb4be0bec721,
-        type: 3}
-      propertyPath: layerMaskInteract.m_Bits
-      value: 1536
-      objectReference: {fileID: 0}
     - target: {fileID: 3532401689306003717, guid: 3f9423cddec5f45aab62eb4be0bec721,
         type: 3}
       propertyPath: m_Name
@@ -370,6 +370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118438207762142336, guid: 3f9423cddec5f45aab62eb4be0bec721,
+        type: 3}
+      propertyPath: layerMaskInteract.m_Bits
+      value: 1536
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9423cddec5f45aab62eb4be0bec721, type: 3}

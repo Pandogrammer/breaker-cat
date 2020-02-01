@@ -84,7 +84,7 @@ public class BrokenObject : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.identity;
             healthyObject.gameObject.SetActive(true);
-            smoke.SetActive(false);
+            //smoke.SetActive(false);
             state = States.Healthy;
         }
     }
