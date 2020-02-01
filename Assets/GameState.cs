@@ -22,6 +22,24 @@ public class GameState : MonoBehaviour
     void Update()
     {
         CheckDoomsday();
+        CheckVictory();
+        CheckDefeat();
+    }
+
+    private void CheckDefeat()
+    {
+        if (doomsday < 0)
+        {
+            uiController.ShowLose();
+        }
+    }
+
+    private void CheckVictory()
+    {
+        if (score == objects.Count)
+        {
+            uiController.ShowWin();
+        }
     }
 
     private void CheckDoomsday()
@@ -35,16 +53,6 @@ public class GameState : MonoBehaviour
             {
                 uiController.SetEndingTimer((float) Math.Round(doomsday, 1));
             }
-            return;
-        }
-
-        if (score == objects.Count)
-        {
-            uiController.ShowWin();
-        }
-        else
-        {
-            uiController.ShowLose();
         }
     }
 

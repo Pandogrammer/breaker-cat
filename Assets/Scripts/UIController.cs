@@ -26,6 +26,7 @@ public class UIController : MonoBehaviour
     public void ShowWin()
     {
         timeText.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(false);
         finishText.text = "YOU WIN!";
         finishText.gameObject.SetActive(true);
     }
@@ -33,6 +34,7 @@ public class UIController : MonoBehaviour
     public void ShowLose()
     {
         timeText.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(false);
         finishText.text = "YOU LOSE :c";
         finishText.gameObject.SetActive(true);
     }
