@@ -187,7 +187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20724
+  m_Name: pb_Mesh21762
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 276334772}
   - component: {fileID: 276334771}
   - component: {fileID: 276334770}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1704,7 @@ GameObject:
   - component: {fileID: 776406563}
   - component: {fileID: 776406562}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cuadro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1794,7 +1794,7 @@ GameObject:
   - component: {fileID: 839296798}
   - component: {fileID: 839296797}
   - component: {fileID: 839296796}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 1000156095}
   - component: {fileID: 1000156094}
   - component: {fileID: 1000156093}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15250,7 +15250,7 @@ GameObject:
   - component: {fileID: 1174747376}
   - component: {fileID: 1174747375}
   - component: {fileID: 1174747374}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cajonera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15335,7 +15335,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20672
+  m_Name: pb_Mesh21710
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -15587,7 +15587,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20712
+  m_Name: pb_Mesh21750
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18157,7 +18157,7 @@ GameObject:
   - component: {fileID: 1739328292}
   - component: {fileID: 1739328291}
   - component: {fileID: 1739328290}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19418,7 +19418,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20740
+  m_Name: pb_Mesh21798
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -19677,7 +19677,7 @@ GameObject:
   - component: {fileID: 2014958519}
   - component: {fileID: 2014958518}
   - component: {fileID: 2014958517}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Chair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20938,7 +20938,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-100472
+  m_Name: pb_Mesh21812
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -21098,7 +21098,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-101128
+  m_Name: pb_Mesh21836
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
