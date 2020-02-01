@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
 
     public void SetScore(int score)
     {
-        scoreText.text = $"REPAIRED: {score}/{objectCount}";
+        scoreText.text = $"Repaired: {score}/{objectCount}";
     }
 
     public void Setup(int objectCount, int time)
@@ -39,6 +39,13 @@ public class UIController : MonoBehaviour
 
     public void SetTimer(int time)
     {
+        timeText.text = $"Time: {time.ToString()}";
+    }
+
+    public void SetEndingTimer(float time)
+    {
+        timeText.color = Color.red;
+        timeText.fontStyle = FontStyles.Bold;
         timeText.text = $"TIME: {time.ToString()}";
     }
 }

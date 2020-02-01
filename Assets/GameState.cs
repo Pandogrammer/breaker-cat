@@ -22,14 +22,19 @@ public class GameState : MonoBehaviour
     void Update()
     {
         CheckDoomsday();
-
     }
 
     private void CheckDoomsday()
     {
         if(doomsday > 0){
             doomsday -= Time.deltaTime;
-            uiController.SetTimer(Mathf.CeilToInt(doomsday));
+            if(doomsday >= 5) {
+                uiController.SetTimer(Mathf.FloorToInt(doomsday));
+            }
+            else
+            {
+                uiController.SetEndingTimer((float) Math.Round(doomsday, 1));
+            }
             return;
         }
 

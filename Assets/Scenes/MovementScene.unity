@@ -463,6 +463,21 @@ PrefabInstance:
       propertyPath: smokeRangeTimer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7585627634852154857, guid: 2de407ea0c8d3440f8afb180ea847de0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585627634852154863, guid: 2de407ea0c8d3440f8afb180ea847de0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7585627634852154861, guid: 2de407ea0c8d3440f8afb180ea847de0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4772648048551946057, guid: 2de407ea0c8d3440f8afb180ea847de0,
         type: 3}
       propertyPath: m_IsActive
@@ -1242,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815c4c69578894ac79893e5a65050e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doomsday: 10
+  doomsday: 11
 --- !u!4 &1548479790
 Transform:
   m_ObjectHideFlags: 0
