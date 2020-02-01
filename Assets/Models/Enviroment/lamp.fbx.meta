@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff5e52573dd8e415398f94e7d363bbd3
+guid: eb273a88b9e8148ca867ab4785d50e4c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: Mat
     2300000: //RootNode
     3300000: //RootNode
-    4300000: cofee_table
+    4300000: Disc_1
   externalObjects: {}
   materials:
     importMaterials: 1

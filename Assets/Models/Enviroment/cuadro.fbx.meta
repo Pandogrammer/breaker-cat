@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff5e52573dd8e415398f94e7d363bbd3
+guid: d0fc4f1eb38e84e21b4dd8207dfa7376
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: Mat
     2300000: //RootNode
     3300000: //RootNode
-    4300000: cofee_table
+    4300000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 7
+    globalScale: 1.7
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
