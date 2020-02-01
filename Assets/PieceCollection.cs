@@ -13,15 +13,22 @@ public class PieceCollection : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetButtonDown("Fire1") && holding)
+        {
+            holding = false;
+            return;
+        }
+            
         RaycastHit hit;
         var fwd = transform.TransformDirection(Vector3.forward);
 
         if (Physics.SphereCast(transform.position, radius, fwd, out hit, rayLength, layerMaskInteract.value))
         {
             var piece = hit.collider.gameObject;
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !holding)
             {
-                holding = !holding;
+                holding = true;
                 pieceBody = piece.GetComponent<Rigidbody>();
                 distance = (hit.point - piece.transform.position).magnitude;
             }
@@ -38,6 +45,6 @@ public class PieceCollection : MonoBehaviour
         pieceBody.velocity = Vector3.zero;
         pieceBody.angularVelocity = Vector3.zero;
         pieceBody.MovePosition(transform.position + transform.forward * (distance + 1.5f));
-        pieceBody.MoveRotation(new Quaternion(0, transform.rotation.y, 0, transform.rotation.w));
+        pieceBody.MoveRotation(new Quaternion(0, transform.rotation.y, 0, transform.rotation.w).normalized);
     }
 }

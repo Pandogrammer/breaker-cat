@@ -27,6 +27,7 @@ public class BreakableObject : MonoBehaviour
             brokenObject.healthyObject.position = placeholder.position;
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";
+            placeholder.gameObject.SetActive(false);
         }
     }
 }
