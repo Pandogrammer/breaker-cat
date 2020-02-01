@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine;
 public class CatTeleporter : MonoBehaviour
 {
     public CatController cat;
-    public CatTeleportPosition[] catTeleportPositions;
+    private List<BrekeableInstantiatorPlaceholder> catTeleportPositions=new List<BrekeableInstantiatorPlaceholder>();
     private int currentTeleport = 0;
 
     public Transform smokeIntro;
@@ -24,13 +25,22 @@ public class CatTeleporter : MonoBehaviour
 
     private void Start() {
 
-        NextTeleport();
         cat.OnActionFinished += NextTeleport;
+    }
+
+    public void StartTeleportation()
+    {
+        NextTeleport();
+    }
+
+    public void AddPoint(BrekeableInstantiatorPlaceholder instance)
+    {
+        catTeleportPositions.Add(instance);
     }
 
     void NextTeleport()
     {
-        if (currentTeleport > catTeleportPositions.Length - 1)
+        if (currentTeleport > catTeleportPositions.Count() - 1)
         {
             ActivateSmokeIntro(catTeleportPositions[currentTeleport - 1].transform.position);
             cat.gameObject.SetActive(false);

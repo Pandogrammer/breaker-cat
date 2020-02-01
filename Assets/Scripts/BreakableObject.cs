@@ -8,6 +8,7 @@ public class BreakableObject : MonoBehaviour
 {
     [SerializeField] private BrokenObject brokenObject;
     [SerializeField] private Transform placeholder;
+    public float catDistance = 1f;
     public event Action ObjectRepaired;
 
     void Update()
