@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float gravity = -9.81f;
 
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform roofCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
@@ -25,18 +26,24 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
         if (isGrounded)
         {
+            velocity.y = 0;
             if (Input.GetButtonDown("Jump"))
             {
+                isGrounded = false;
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
+
+        }
+        
+        var roofCollision = Physics.CheckSphere(roofCheck.position, groundDistance, groundMask);
+        if (roofCollision)
+        {
+            velocity.y = 0;
         }
         
         velocity.y += gravity * Time.deltaTime;
-        velocity.y = Mathf.Max(velocity.y, gravity);
-
         controller.Move(velocity);
     }
 
