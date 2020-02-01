@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections;
+using System.Diagnostics;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class BrokenObject : MonoBehaviour
     public float rangeTimer = 3f;
     public float smokeRangeTimer = 5f;
     public GameObject smoke;
+    public Transform brokenPieces;
 
     private float timeToBreak = 0f;
     private float smokeTimer = 0f;
@@ -22,7 +24,7 @@ public class BrokenObject : MonoBehaviour
 
     private void Awake()
     {
-        state = States.Drop;
+        state = States.Start;
     }
 
     private void Update()
@@ -32,18 +34,20 @@ public class BrokenObject : MonoBehaviour
         FixAnimation();
     }
 
-    public void OnPieceTouchFloor(Vector3 collidePoint)
+    public void OnPieceTouchFloor(Vector3 collisionPoint)
     {
-        if (state != States.Drop)
+        if (state != States.Start)
             return;
-        
+        healthyObject.gameObject.SetActive(false);
+        brokenPieces.transform.position = healthyObject.transform.position;
+
         foreach (var piece in rigidbodies)
         {
-            var dir = piece.transform.position - collidePoint;
-            Debug.Log(dir);
+            var dir = piece.transform.position - collisionPoint;
+            piece.gameObject.SetActive(true);
             piece.AddForce(dir * force, ForceMode.Impulse);
         }
-        state = States.Crash;
+        state = States.Drop;
     }
 
     private void OnCrash()
@@ -84,7 +88,6 @@ public class BrokenObject : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.identity;
             healthyObject.gameObject.SetActive(true);
-            //smoke.SetActive(false);
             state = States.Healthy;
         }
     }
