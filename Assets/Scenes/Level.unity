@@ -187,7 +187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17888
+  m_Name: pb_Mesh18990
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 1171787035}
   - component: {fileID: 1171787034}
   - component: {fileID: 1171787033}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
