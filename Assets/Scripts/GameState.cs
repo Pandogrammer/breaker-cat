@@ -59,6 +59,8 @@ public class GameState : MonoBehaviour
     {
         if (doomsday < 0)
         {
+            dog.DisableControls();
+            playing = false;
             gameplayGUI.ShowLose();
         }
     }
@@ -67,6 +69,8 @@ public class GameState : MonoBehaviour
     {
         if (score == objects.Count)
         {
+            dog.DisableControls();
+            playing = false;
             gameplayGUI.ShowWin();
         }
     }

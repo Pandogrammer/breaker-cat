@@ -1,15 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameplayGUIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private GameObject restartPanel; 
+    [SerializeField] private Button restartButton;
     private int objectCount;
+
+    private void Awake()
+    {
+        restartButton.onClick.AddListener(RestartScene);
+    }
+
+    private void RestartScene()
+    {
+         Application.LoadLevel(Application.loadedLevel);
+    }
 
     public void SetScore(int score)
     {
@@ -25,18 +39,21 @@ public class GameplayGUIController : MonoBehaviour
 
     public void ShowWin()
     {
-        timeText.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
-        finishText.text = "YOU WIN!";
-        finishText.gameObject.SetActive(true);
+        PresentEndGame("YOU WIN!");
     }
 
     public void ShowLose()
     {
+        PresentEndGame("YOU LOSE :c");
+    }
+
+    private void PresentEndGame(string endMessage)
+    {
         timeText.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
-        finishText.text = "YOU LOSE :c";
+        finishText.text = endMessage;
         finishText.gameObject.SetActive(true);
+        restartPanel.SetActive(true);
     }
 
     public void SetTimer(int time)

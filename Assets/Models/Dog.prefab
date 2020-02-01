@@ -377,3 +377,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 31736337}
+  mouseLook: {fileID: 3532401688684117999}
+  movement: {fileID: 3532401689306003768}
