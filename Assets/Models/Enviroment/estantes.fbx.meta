@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 9f4031fe6a2204f0bb2e12b94d37653b
+guid: e1f5ae9dda65547b89571ad7a5f85e8e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Mat
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: sillon_obj
+    4300000: Cube_1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 8
+    globalScale: 4
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
