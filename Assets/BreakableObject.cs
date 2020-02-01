@@ -11,6 +11,10 @@ public class BreakableObject : MonoBehaviour
     public event Action ObjectRepaired;
     void Update()
     {
+        if (brokenObject.state == States.Drop)
+        {
+            placeholder.gameObject.SetActive(true);
+        }
         CheckDistance();
     }
 
@@ -27,7 +31,6 @@ public class BreakableObject : MonoBehaviour
             brokenObject.healthyObject.position = placeholder.position;
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";
-            placeholder.gameObject.SetActive(false);
         }
     }
 }

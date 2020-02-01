@@ -11,11 +11,9 @@ public class PieceColliderTriggerer : MonoBehaviour
     {
         if (collision.gameObject.layer == 9 || collision.gameObject.tag == "FixedObject")
         {
-            Debug.Log("return");
             return;
 
         }
-        Debug.Log("rompo");
 
         transform.GetComponentInParent<BrokenObject>().OnPieceTouchFloor(collision.contacts.First().point);
   
