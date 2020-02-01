@@ -119,6 +119,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4118438207762142336, guid: 3f9423cddec5f45aab62eb4be0bec721,
+        type: 3}
+      propertyPath: layerMaskInteract.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
     - target: {fileID: 3532401689306003717, guid: 3f9423cddec5f45aab62eb4be0bec721,
         type: 3}
       propertyPath: m_Name
@@ -516,6 +521,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284038287777569785, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284038287777569787, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284038287777569791, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298182130173288, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: smokeRangeTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298183864365407, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298183864365407, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298183864365401, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298183864365403, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956298183864365405, guid: 73106e5eecc0b9a428da5308e3951603,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73106e5eecc0b9a428da5308e3951603, type: 3}
