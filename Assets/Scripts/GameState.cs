@@ -5,18 +5,27 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    private UIController uiController;
-    private List<BreakableObject> objects;
-
+    [SerializeField] private GameplayGUIController gameplayGUI;
+    [SerializeField] private StartGUIController startGUI;
     [SerializeField] private float doomsday = 10;
+    [SerializeField] private Dog dog;
+    
+    private List<BreakableObject> objects;
     private int score;
 
     void Awake()
     {
-        uiController = FindObjectOfType<UIController>();
         objects = FindObjectsOfType<BreakableObject>().ToList();
         objects.ForEach(SubscribeToScore);
-        uiController.Setup(objects.Count, (int)doomsday);
+        gameplayGUI.Setup(objects.Count, (int)doomsday);
+
+        startGUI.OnStartGame += StartGame;
+    }
+
+    private void StartGame()
+    {
+        startGUI.gameObject.SetActive(false);
+        dog.StartGame();
     }
 
     void Update()
@@ -30,7 +39,7 @@ public class GameState : MonoBehaviour
     {
         if (doomsday < 0)
         {
-            uiController.ShowLose();
+            gameplayGUI.ShowLose();
         }
     }
 
@@ -38,7 +47,7 @@ public class GameState : MonoBehaviour
     {
         if (score == objects.Count)
         {
-            uiController.ShowWin();
+            gameplayGUI.ShowWin();
         }
     }
 
@@ -47,11 +56,11 @@ public class GameState : MonoBehaviour
         if(doomsday > 0){
             doomsday -= Time.deltaTime;
             if(doomsday >= 5) {
-                uiController.SetTimer(Mathf.FloorToInt(doomsday));
+                gameplayGUI.SetTimer(Mathf.FloorToInt(doomsday));
             }
             else
             {
-                uiController.SetEndingTimer((float) Math.Round(doomsday, 1));
+                gameplayGUI.SetEndingTimer((float) Math.Round(doomsday, 1));
             }
         }
     }
@@ -64,6 +73,6 @@ public class GameState : MonoBehaviour
     private void AddScore()
     {
         score++;
-        uiController.SetScore(score);
+        gameplayGUI.SetScore(score);
     }
 }
