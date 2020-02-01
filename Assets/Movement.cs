@@ -33,10 +33,9 @@ public class Movement : MonoBehaviour
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
         }
-        else
-        {
-            velocity.y += (gravity * Time.deltaTime);
-        }
+        
+        velocity.y += gravity * Time.deltaTime;
+        velocity.y = Mathf.Max(velocity.y, gravity);
 
         controller.Move(velocity);
     }
