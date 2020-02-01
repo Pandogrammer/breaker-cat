@@ -695,6 +695,11 @@ PrefabInstance:
       propertyPath: dog
       value: 
       objectReference: {fileID: 31736338}
+    - target: {fileID: 291989695794279203, guid: 6a4af893fc0664786bd0c2196b4b6913,
+        type: 3}
+      propertyPath: doomsday
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a4af893fc0664786bd0c2196b4b6913, type: 3}
 --- !u!1001 &2720168236060461044
@@ -748,6 +753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameplayGUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720168236011731178, guid: 4fa35279a448348968d94aa1a3b1be8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2720168236011731159, guid: 4fa35279a448348968d94aa1a3b1be8a,
         type: 3}
