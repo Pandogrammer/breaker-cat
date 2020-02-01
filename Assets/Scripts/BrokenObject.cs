@@ -9,7 +9,7 @@ public class BrokenObject : MonoBehaviour
     public Rigidbody[] rigidbodies;
     public Transform healthyObject;
     public float force = 20;
-    public float minDistantce = 10f;
+    public float minDistantce = 1f;
     public float rangeTimer = 3f;
     public float smokeRangeTimer = 5f;
     public GameObject smoke;
@@ -62,7 +62,7 @@ public class BrokenObject : MonoBehaviour
         if(state != States.Broken)
             return;
         
-        var sum = rigidbodies.Aggregate(Vector3.zero, (current, piece) => current + piece.transform.position);
+        var sum = rigidbodies.Aggregate(Vector3.zero, (current, piece) => current + piece.transform.position) / rigidbodies.Length;
         if (rigidbodies.All(piece => Vector3.Distance(sum, piece.transform.position) < minDistantce))
         {
             gameObject.transform.position = sum;
