@@ -32,6 +32,9 @@ public class PieceCollection : MonoBehaviour
 
     private void MoveObject()
     {
+        if (pieceBody.CompareTag("OnStartingPosition"))
+            return;
+        
         pieceBody.velocity = Vector3.zero;
         pieceBody.angularVelocity = Vector3.zero;
         pieceBody.MovePosition(transform.position + transform.forward * (distance + 1.5f));

@@ -18,7 +18,7 @@ public class BrokenObject : MonoBehaviour
     private float smokeTimer = 0f;
     bool activated;
     bool onFixed;
-    private States state = States.Healthy;
+    public States state = States.Healthy;
 
     private void Awake()
     {
@@ -27,7 +27,6 @@ public class BrokenObject : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("state: " + state);
         OnCrash();
         StartFixAnimation();
         FixAnimation();
