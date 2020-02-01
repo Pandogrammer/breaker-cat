@@ -9,12 +9,18 @@ public class BreakableObject : MonoBehaviour
     [SerializeField] private BrokenObject brokenObject;
     [SerializeField] private Transform placeholder;
     public event Action ObjectRepaired;
+
     void Update()
     {
-        if (brokenObject.state == States.Drop)
+        if (brokenObject.state == States.Crash)
         {
             placeholder.gameObject.SetActive(true);
         }
+        else if (brokenObject.state == States.BackToStartingPosition)
+        {
+            placeholder.gameObject.SetActive(false);
+        }
+
         CheckDistance();
     }
 
@@ -27,7 +33,7 @@ public class BreakableObject : MonoBehaviour
         if (brokenObject.state == States.Healthy)
         {
             ObjectRepaired();
-            brokenObject.state = States.OnStartingPosition;
+            brokenObject.state = States.BackToStartingPosition;
             brokenObject.healthyObject.position = placeholder.position;
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";

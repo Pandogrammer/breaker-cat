@@ -47,7 +47,7 @@ public class BrokenObject : MonoBehaviour
             piece.gameObject.SetActive(true);
             piece.AddForce(dir * force, ForceMode.Impulse);
         }
-        state = States.Drop;
+        state = States.Crash;
     }
 
     private void OnCrash()
@@ -69,6 +69,7 @@ public class BrokenObject : MonoBehaviour
         if (rigidbodies.All(piece => Vector3.Distance(sum, piece.transform.position) < minDistantce))
         {
             gameObject.transform.position = sum;
+            healthyObject.transform.position = sum;
             state = States.Fixed;
             smoke.SetActive(true);
             foreach (var piece in rigidbodies)
