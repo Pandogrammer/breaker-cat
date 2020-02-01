@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     [SerializeField] private GameplayGUIController gameplayGUI;
-    [SerializeField] private StartGUIController startGUI;
     [SerializeField] private float doomsday = 10;
     [SerializeField] private Dog dog;
     [SerializeField] private GameObject breakableObjectPrefab;
@@ -17,7 +16,7 @@ public class GameState : MonoBehaviour
 
     void Awake()
     {
-        startGUI.OnStartButtonClicked += StartButtonClicked;
+        StartButtonClicked();
         dog.OnGameStarted += StartGame;
     }
 
@@ -41,7 +40,6 @@ public class GameState : MonoBehaviour
 
     private void StartButtonClicked()
     {
-        startGUI.gameObject.SetActive(false);
         dog.StartGame();
     }
 
