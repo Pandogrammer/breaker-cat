@@ -35,6 +35,6 @@ public class PieceCollection : MonoBehaviour
         pieceBody.velocity = Vector3.zero;
         pieceBody.angularVelocity = Vector3.zero;
         pieceBody.MovePosition(transform.position + transform.forward * (distance + 1.5f));
-        pieceBody.MoveRotation(transform.rotation);
+        pieceBody.MoveRotation(new Quaternion(0, transform.rotation.y, 0, transform.rotation.w));
     }
 }
