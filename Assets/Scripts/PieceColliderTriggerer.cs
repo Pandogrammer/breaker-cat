@@ -9,7 +9,7 @@ public class PieceColliderTriggerer : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9 || collision.gameObject.tag=="FixedObject")
             return;
         transform.GetComponentInParent<BrokenObject>().OnPieceTouchFloor(collision.contacts.First().point);
   
