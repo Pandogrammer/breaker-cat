@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayGUIController : MonoBehaviour
@@ -12,17 +13,24 @@ public class GameplayGUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private GameObject restartPanel; 
-    [SerializeField] private Button restartButton;
+    [SerializeField] private Button restartButton; 
+    [SerializeField] private Button goToMenuButton;
     private int objectCount;
 
     private void Awake()
     {
         restartButton.onClick.AddListener(RestartScene);
+        goToMenuButton.onClick.AddListener(GoToMenu);
     }
 
     private void RestartScene()
     {
          Application.LoadLevel(Application.loadedLevel);
+    }
+
+    private void GoToMenu()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 
     public void SetScore(int score)
