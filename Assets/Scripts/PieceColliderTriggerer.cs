@@ -15,7 +15,6 @@ public class PieceColliderTriggerer : MonoBehaviour
 
         }
 
-        transform.GetComponentInParent<BrokenObject>().OnPieceTouchFloor(collision.contacts.First().point);
-  
+        transform.GetComponentInParent<BrokenObject>().OnPieceTouchFloor(collision.transform.position);
     }
 }

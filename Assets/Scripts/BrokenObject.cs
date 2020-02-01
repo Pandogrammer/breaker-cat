@@ -21,6 +21,7 @@ public class BrokenObject : MonoBehaviour
     bool activated;
     bool onFixed;
     public States state = States.Healthy;
+    bool frameChange;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class BrokenObject : MonoBehaviour
 
     private void Update()
     {
+        frameChange = true;
         OnCrash();
         StartFixAnimation();
         FixAnimation();
@@ -40,14 +42,25 @@ public class BrokenObject : MonoBehaviour
             return;
         healthyObject.gameObject.SetActive(false);
         brokenPieces.transform.position = healthyObject.transform.position;
+        brokenPieces.transform.rotation = healthyObject.transform.rotation;
 
         foreach (var piece in rigidbodies)
         {
-            var dir = piece.transform.position - collisionPoint;
             piece.gameObject.SetActive(true);
-            piece.AddForce(dir * force, ForceMode.Impulse);
         }
         state = States.Crash;
+        StartCoroutine(ImpulsePieces(collisionPoint));
+    }
+
+    IEnumerator ImpulsePieces(Vector3 collisionPoint)
+    {
+        frameChange = false;
+        yield return new WaitUntil(()=>frameChange);
+        foreach (var piece in rigidbodies)
+        {
+            var dir = piece.transform.position - (healthyObject.transform.position - collisionPoint)/2;
+            piece.AddForce(dir * force, ForceMode.Impulse);
+        }
     }
 
     private void OnCrash()

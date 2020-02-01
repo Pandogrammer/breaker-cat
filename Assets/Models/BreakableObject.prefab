@@ -747,7 +747,7 @@ MonoBehaviour:
   - {fileID: 4689712780327550748}
   - {fileID: 3613565904775600453}
   healthyObject: {fileID: 4772648048551656297}
-  force: 15
+  force: 10
   minDistantce: 1
   rangeTimer: 4.82
   smokeRangeTimer: 1

@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
     public event Action OnActionFinished;
 
-    public float teleportEvery = 3f;
+    public float animationTime = 2f;
     public float activatePushIn = 1f;
     public Transform pushCollider;
     public Animator animator;
+
 
     public void TeleportTo(Vector3 position, Vector3 forward)
     {
@@ -30,7 +32,7 @@ public class CatController : MonoBehaviour
 
     IEnumerator TeleportTimer()
     {
-        yield return new WaitForSeconds(teleportEvery);
+        yield return new WaitForSeconds(animationTime);
         pushCollider.gameObject.SetActive(false);
         OnActionFinished?.Invoke();
     }
