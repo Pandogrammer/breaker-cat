@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 97e97bf3f0cdb31448b167c5cf195d0a
+guid: 3fec68b8bc6030c45ba9252263366877
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Object001
     100002: Object002
-    100004: //RootNode
-    100006: venus_1
+    100004: venus_1
+    100006: //RootNode
     400000: Object001
     400002: Object002
-    400004: //RootNode
-    400006: venus_1
+    400004: venus_1
+    400006: //RootNode
     2100000: venus
     2300000: Object001
     2300002: Object002
@@ -21,8 +21,6 @@ ModelImporter:
     4300000: venus_1
     4300002: Object001
     4300004: Object002
-    7400000: Take 001
-    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -75,8 +73,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.0254
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -103,7 +101,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
