@@ -14,6 +14,7 @@ public class GameplayGUIController : MonoBehaviour
     [SerializeField] private RawImage badBoy;
     [SerializeField] private GameObject timer;
     [SerializeField] private GameObject targetScore;
+    [SerializeField] private Text yourScore;
     
     private int objectCount;
 
@@ -45,9 +46,11 @@ public class GameplayGUIController : MonoBehaviour
         SetScore(0);
     }
 
-    public void ShowWin()
+    public void ShowWin(int time)
     {
+        yourScore.text = time.ToString();
         goodBoy.gameObject.SetActive(true);
+        yourScore.gameObject.SetActive(true);
         PresentEndGame();
     }
 

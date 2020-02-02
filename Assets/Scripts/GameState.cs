@@ -59,7 +59,7 @@ public class GameState : MonoBehaviour
         {
             dog.DisableControls();
             playing = false;
-            gameplayGUI.ShowWin();
+            gameplayGUI.ShowWin(Mathf.FloorToInt(doomsday));
         }
     }
 
