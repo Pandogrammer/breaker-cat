@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenObject: {fileID: 4772648050164814718}
   placeholder: {fileID: 4499363912868971130}
-  catDistance: 1.5
+  catDistance: 2
 --- !u!1 &4499363912868971129
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   - {fileID: 4689712780327550748}
   - {fileID: 3613565904775600453}
   healthyObject: {fileID: 4772648048551656297}
-  force: 2.5
+  force: 2000
   minDistantce: 1
   rangeTimer: 4.82
   smokeRangeTimer: 1
