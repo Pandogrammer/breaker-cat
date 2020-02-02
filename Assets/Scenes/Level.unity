@@ -25140,6 +25140,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106868823208795893, guid: 3f9423cddec5f45aab62eb4be0bec721,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a4bed431dc73c46f48539e27807917a2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9423cddec5f45aab62eb4be0bec721, type: 3}
 --- !u!4 &1623357982 stripped
