@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenObject: {fileID: 4772648050164814718}
   placeholder: {fileID: 4499363912868971130}
-  catDistance: 2
+  catDistance: 1.7
 --- !u!1 &4499363912868971129
 GameObject:
   m_ObjectHideFlags: 0
