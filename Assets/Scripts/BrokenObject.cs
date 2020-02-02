@@ -58,8 +58,6 @@ public class BrokenObject : MonoBehaviour
         yield return new WaitUntil(()=>frameChange);
         foreach (var piece in rigidbodies)
         {
-            //var dir = piece.transform.position - (healthyObject.transform.position - collisionPoint)/2;
-            //piece.AddForce(piece.transform.forward * force, ForceMode.Impulse);
             piece.AddExplosionForce(force, healthyObject.transform.position, 2);
         }
     }
