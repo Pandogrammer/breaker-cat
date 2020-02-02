@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -884,6 +884,7 @@ MonoBehaviour:
   badBoy: {fileID: 1249328151}
   timer: {fileID: 4077010899650192102}
   targetScore: {fileID: 9081789798623786973}
+  yourScore: {fileID: 0}
 --- !u!1 &4077010899650192102
 GameObject:
   m_ObjectHideFlags: 0
