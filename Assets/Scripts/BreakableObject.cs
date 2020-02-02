@@ -33,7 +33,7 @@ public class BreakableObject : MonoBehaviour
 
         if (brokenObject.state == States.Healthy)
         {
-            ObjectRepaired();
+            ObjectRepaired?.Invoke();
             brokenObject.state = States.BackToStartingPosition;
             brokenObject.healthyObject.position = placeholder.position;
             brokenObject.healthyObject.GetComponent<Rigidbody>().isKinematic = false;
