@@ -1,44 +1,27 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuScreenController : MonoBehaviour
 {
-    private readonly string scene = "MovementScene";
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip menuMusic;
+    private readonly string scene = "CinematicScene";
     [SerializeField] private Button playButton;
+    [SerializeField] private IntroMusicGame introMusicGame;
 
     private void Awake()
     {
+        introMusicGame.PlayMusic += PlayMusic;
         playButton.onClick.AddListener(StartGame);
-        CreateAudioSource();
     }
 
-    private void CreateAudioSource()
+    private void PlayMusic()
     {
-        var newAudioSource = new GameObject("AudioSource").AddComponent<AudioSource>();
-        newAudioSource.loop = true;
-        audioSource = newAudioSource;
-    }
-
-    private void Start()
-    {
-        Play();
+        introMusicGame.Play();
     }
 
     private void StartGame()
     {
         SceneManager.LoadScene(scene);
-    }
-    
-    void Play()
-    {
-        if (audioSource.isPlaying || !enabled)
-            return;
-
-        audioSource.clip = menuMusic;
-        audioSource.Play();
-
     }
 }
