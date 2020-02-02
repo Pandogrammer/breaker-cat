@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed5e4cffe79a4568b9758cb49c78211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: 408d97456a03cce499194fce070761fc, type: 3}
+  menuMusic: {fileID: 0}
   playButton: {fileID: 874926213}
 --- !u!1 &810358761
 GameObject:
@@ -262,8 +262,8 @@ Camera:
   m_GameObject: {fileID: 810358761}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -344,7 +344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -104}
+  m_AnchoredPosition: {x: 2, y: -91}
   m_SizeDelta: {x: 130.63, y: 36.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874926213
@@ -569,8 +569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: -11.099}
-  m_SizeDelta: {x: 976.5, y: 681.8}
+  m_AnchoredPosition: {x: -20.9, y: -10}
+  m_SizeDelta: {x: 841.8, y: 549.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765195520
 MonoBehaviour:
