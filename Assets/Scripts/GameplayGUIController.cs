@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class GameplayGUIController : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
-    [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private Text timeText;
-    [SerializeField] private GameObject restartPanel; 
     [SerializeField] private GameObject finishFeedback; 
     [SerializeField] private Button restartButton; 
     [SerializeField] private Button goToMenuButton;
@@ -55,7 +53,7 @@ public class GameplayGUIController : MonoBehaviour
 
     public void ShowLose()
     {
-        goodBoy.gameObject.SetActive(true);
+        badBoy.gameObject.SetActive(true);
         PresentEndGame();
     }
 
