@@ -8,6 +8,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private GameplayGUIController gameplayGUI;
     [SerializeField] private float doomsday = 10;
     [SerializeField] private Dog dog;
+    [SerializeField] private BrekeablesRandomInstantiator instantiator;
     
     private List<BreakableObject> objects;
     private int score;
@@ -16,13 +17,18 @@ public class GameState : MonoBehaviour
     void Awake()
     {
         StartButtonClicked();
+        instantiator.OnObjectsInstantiate += SubscribeObjects;
         dog.OnGameStarted += StartGame;
+    }
+
+    private void SubscribeObjects(List<BreakableObject> obj)
+    {
+        objects = obj;
+        objects.ForEach(SubscribeToScore);
     }
 
     private void StartGame()
     {
-        objects = FindObjectsOfType<BreakableObject>().ToList();
-        objects.ForEach(SubscribeToScore);
         gameplayGUI.Setup(objects.Count, (int)doomsday);
         playing = true;
         gameplayGUI.gameObject.SetActive(true);

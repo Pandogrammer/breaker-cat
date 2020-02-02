@@ -11,15 +11,20 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
     public List<BreakableObject> prefabs;
     public CatTeleporter catTeleporter;
     private int prefabNumber=0;
+    private List<BreakableObject> instantiatedObjects;
+
+    public event Action<List<BreakableObject>> OnObjectsInstantiate;
 
     private void Awake()
     {
+        instantiatedObjects = new List<BreakableObject>();
         instantiators = GetComponentsInChildren<BrekeableInstantiatorPlaceholder>();
     }
 
     private void Start()
     {
         Instantiate();
+        OnObjectsInstantiate(instantiatedObjects);
     }
 
     private void Instantiate()
@@ -29,6 +34,7 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
             .Take(instanceQuantities).ToList();
         randomInstances.ForEach(instance => {
             var brekeable=InstantiateInPosition(instance);
+            instantiatedObjects.Add(brekeable);
             instance.transform.position -= instance.transform.forward * brekeable.catDistance;
             catTeleporter.AddPoint(instance);
         });
