@@ -37,9 +37,12 @@ public class BreakableObject : MonoBehaviour
             brokenObject.state = States.BackToStartingPosition;
             brokenObject.healthyObject.position = placeholder.position + Vector3.up*1.1f;
             brokenObject.healthyObject.rotation = placeholder.rotation;
-            brokenObject.healthyObject.GetComponent<Rigidbody>().isKinematic = true;
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";
+            var rigidBody = brokenObject.healthyObject.GetComponent<Rigidbody>();
+            rigidBody.freezeRotation = true;        
+            rigidBody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
+
         }
     }
 }
