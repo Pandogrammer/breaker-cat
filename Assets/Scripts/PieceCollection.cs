@@ -33,8 +33,13 @@ public class PieceCollection : MonoBehaviour
                 pieceBody = piece.GetComponent<Rigidbody>();
             }
         }
-        if(holding)
+        if(holding){
             MoveObject();
+            if (pieceBody.gameObject.CompareTag("OnStartingPosition"))
+            {
+                holding = false;
+            }
+        }
     }
 
     private void MoveObject()

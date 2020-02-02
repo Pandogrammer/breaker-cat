@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CatTeleporter : MonoBehaviour
 {
+    [SerializeField] private float startingTime;
     public CatController cat;
     private List<BrekeableInstantiatorPlaceholder> catTeleportPositions=new List<BrekeableInstantiatorPlaceholder>();
     private int currentTeleport = 0;
@@ -30,6 +31,12 @@ public class CatTeleporter : MonoBehaviour
 
     public void StartTeleportation()
     {
+        StartCoroutine(StartTeleporting());
+    }
+
+    private IEnumerator StartTeleporting()
+    {
+        yield return new WaitForSeconds(startingTime);
         NextTeleport();
     }
 
