@@ -9,9 +9,9 @@ using UnityEngine.UI;
 
 public class GameplayGUIController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Text scoreText;
     [SerializeField] private TextMeshProUGUI finishText;
-    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private Text timeText;
     [SerializeField] private GameObject restartPanel; 
     [SerializeField] private Button restartButton; 
     [SerializeField] private Button goToMenuButton;
@@ -67,12 +67,5 @@ public class GameplayGUIController : MonoBehaviour
     public void SetTimer(int time)
     {
         timeText.text = $"Time: {time.ToString()}";
-    }
-
-    public void SetEndingTimer(float time)
-    {
-        timeText.color = Color.red;
-        timeText.fontStyle = FontStyles.Bold;
-        timeText.text = $"TIME: {time.ToString()}";
     }
 }

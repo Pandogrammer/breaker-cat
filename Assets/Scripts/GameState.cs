@@ -77,13 +77,7 @@ public class GameState : MonoBehaviour
     {
         if(doomsday > 0){
             doomsday -= Time.deltaTime;
-            if(doomsday >= 5) {
-                gameplayGUI.SetTimer(Mathf.FloorToInt(doomsday));
-            }
-            else
-            {
-                gameplayGUI.SetEndingTimer((float) Math.Round(doomsday, 1));
-            }
+            gameplayGUI.SetTimer(Mathf.FloorToInt(doomsday));
         }
     }
 
