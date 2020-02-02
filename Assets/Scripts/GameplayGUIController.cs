@@ -35,7 +35,7 @@ public class GameplayGUIController : MonoBehaviour
 
     public void SetScore(int score)
     {
-        scoreText.text = $"Repaired: {score}/{objectCount}";
+        scoreText.text = $"{score}/{objectCount}";
     }
 
     public void Setup(int objectCount, int time)
@@ -68,6 +68,6 @@ public class GameplayGUIController : MonoBehaviour
 
     public void SetTimer(int time)
     {
-        timeText.text = $"Time: {time.ToString()}";
+        timeText.text = $"{time.ToString()}";
     }
 }

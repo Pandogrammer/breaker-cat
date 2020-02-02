@@ -44,8 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayGUI: {fileID: 0}
-  startGUI: {fileID: 0}
-  doomsday: 31
+  doomsday: 61
   dog: {fileID: 0}
-  breakableObjectPrefab: {fileID: 4499363911867549543, guid: 2de407ea0c8d3440f8afb180ea847de0,
-    type: 3}
