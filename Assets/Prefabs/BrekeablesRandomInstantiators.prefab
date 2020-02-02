@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c4ef2137cd885429f5724f2ec81618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instanceQuantities: 5
+  instanceQuantities: 3
   prefabs:
   - {fileID: 4499363911867549536, guid: 851c6854a5e7b4b9eb97fe074a3f2efd, type: 3}
   - {fileID: 4499363911867549536, guid: bafa344566a0b9545bc0296508a69e40, type: 3}
@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 4499363911867549536, guid: 14a007ce14714bc4d90a0095687a6fb3, type: 3}
   - {fileID: 4499363911867549536, guid: b090ef18eb6611e48a517d6f128567a4, type: 3}
   catTeleporter: {fileID: 4038899464279049135}
+  _prefabsRandom: []
 --- !u!1 &4038899463067852262
 GameObject:
   m_ObjectHideFlags: 0

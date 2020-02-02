@@ -12,11 +12,13 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
     public CatTeleporter catTeleporter;
     private int prefabNumber=0;
     private List<BreakableObject> instantiatedObjects;
+    public List<BreakableObject> _prefabsRandom;
 
     public event Action<List<BreakableObject>> OnObjectsInstantiate;
 
     private void Awake()
     {
+        _prefabsRandom = new List<BreakableObject>(prefabs);
         instantiatedObjects = new List<BreakableObject>();
         instantiators = GetComponentsInChildren<BrekeableInstantiatorPlaceholder>();
     }
@@ -24,7 +26,7 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
     private void Start()
     {
         Instantiate();
-        OnObjectsInstantiate(instantiatedObjects);
+        OnObjectsInstantiate?.Invoke(instantiatedObjects);
     }
 
     private void Instantiate()
@@ -43,7 +45,9 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
 
     private BreakableObject InstantiateInPosition(BrekeableInstantiatorPlaceholder instance)
     {
-        var prefab = prefabs[prefabNumber++%prefabs.Count];
+        var randomNum = UnityEngine.Random.Range(0, _prefabsRandom.Count) % _prefabsRandom.Count;
+        var prefab = _prefabsRandom[randomNum];
+        _prefabsRandom.RemoveAt(randomNum);
         var pos = instance.transform.position;
         return GameObject.Instantiate<BreakableObject>(prefab, pos, Quaternion.identity, transform);
     }
