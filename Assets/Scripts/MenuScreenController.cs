@@ -33,7 +33,7 @@ public class MenuScreenController : MonoBehaviour
 
     private void PlayMusic()
     {
-        musicGameController.Play();
+        musicGameController.PlayMenuMusic();
     }
 
     private void StartGame()

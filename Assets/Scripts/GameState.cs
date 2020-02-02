@@ -60,6 +60,7 @@ public class GameState : MonoBehaviour
             dog.DisableControls();
             playing = false;
             gameplayGUI.ShowLose();
+            musicGameControllerController.PlayMenuMusic();
         }
     }
 
@@ -70,6 +71,7 @@ public class GameState : MonoBehaviour
             dog.DisableControls();
             playing = false;
             gameplayGUI.ShowWin(Mathf.FloorToInt(doomsday));
+            musicGameControllerController.PlayMenuMusic();
         }
     }
 

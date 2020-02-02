@@ -34,7 +34,7 @@ namespace DefaultNamespace
             PlayMusic();
         }
 
-        public void Play()
+        public void PlayMenuMusic()
         {
             Stop();
             audioSource.loop = true;
