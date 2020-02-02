@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d97433d3a1a34943bdce0641cd51014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTime: 2
+  animationTime: 7
   activatePushIn: 1.5
   pushCollider: {fileID: 898950025}
   animator: {fileID: 2901214823396705458}
