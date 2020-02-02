@@ -36,7 +36,7 @@ public class BreakableObject : MonoBehaviour
             ObjectRepaired?.Invoke();
             brokenObject.state = States.BackToStartingPosition;
             brokenObject.healthyObject.position = placeholder.position;
-            brokenObject.healthyObject.GetComponent<Rigidbody>().isKinematic = false;
+            brokenObject.healthyObject.GetComponent<Rigidbody>().isKinematic = true;
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";
         }
