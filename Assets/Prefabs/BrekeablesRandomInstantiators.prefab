@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1180335491bb233428df9c4c50b733ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 10
+  startingTime: 6
   cat: {fileID: 4038899462690970527}
   smokeIntro: {fileID: 5988220484463712487}
   smokeOutro: {fileID: 5988220483693085459}
@@ -660,19 +660,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2901214823389460230, guid: eb535384c91d5ed4c9c91650f689c603,
+        type: 3}
+      propertyPath: m_TagString
+      value: OnStartingPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 2556891219025480654, guid: eb535384c91d5ed4c9c91650f689c603,
         type: 3}
       propertyPath: activatePushIn
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 2556891219025480654, guid: eb535384c91d5ed4c9c91650f689c603,
+        type: 3}
+      propertyPath: animationTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 898950024, guid: eb535384c91d5ed4c9c91650f689c603, type: 3}
       propertyPath: m_TagString
       value: FixedObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 2901214823389460230, guid: eb535384c91d5ed4c9c91650f689c603,
-        type: 3}
-      propertyPath: m_TagString
-      value: OnStartingPosition
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb535384c91d5ed4c9c91650f689c603, type: 3}
@@ -851,6 +856,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4038899464279049132}
     m_Modifications:
+    - target: {fileID: 7716745769513223657, guid: f05fd8436b700e5488c6661349cbe88e,
+        type: 3}
+      propertyPath: m_Name
+      value: SmokeCatTeleport
+      objectReference: {fileID: 0}
     - target: {fileID: 7716745769512999369, guid: f05fd8436b700e5488c6661349cbe88e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -905,11 +915,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7716745769513223657, guid: f05fd8436b700e5488c6661349cbe88e,
-        type: 3}
-      propertyPath: m_Name
-      value: SmokeCatTeleport
       objectReference: {fileID: 0}
     - target: {fileID: 1299493120376477275, guid: f05fd8436b700e5488c6661349cbe88e,
         type: 3}
@@ -936,6 +941,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4038899464279049132}
     m_Modifications:
+    - target: {fileID: 7716745769513223657, guid: f05fd8436b700e5488c6661349cbe88e,
+        type: 3}
+      propertyPath: m_Name
+      value: SmokeCatTeleport (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 7716745769512999369, guid: f05fd8436b700e5488c6661349cbe88e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -990,11 +1000,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7716745769513223657, guid: f05fd8436b700e5488c6661349cbe88e,
-        type: 3}
-      propertyPath: m_Name
-      value: SmokeCatTeleport (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1299493120376477275, guid: f05fd8436b700e5488c6661349cbe88e,
         type: 3}

@@ -28,7 +28,7 @@ public class BreakableObject : MonoBehaviour
     private void CheckDistance()
     {
         var distance = Vector3.Distance(brokenObject.healthyObject.position, placeholder.position);
-        if (distance > 0.5f)
+        if (distance > 1f)
             return;
 
         if (brokenObject.state == States.Healthy)
