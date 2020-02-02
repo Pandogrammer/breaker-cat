@@ -15,6 +15,7 @@ public class GameplayGUIController : MonoBehaviour
     [SerializeField] private GameObject timer;
     [SerializeField] private GameObject targetScore;
     [SerializeField] private Text yourScore;
+    [SerializeField] private RawImage crosshair;
     
     private int objectCount;
 
@@ -67,10 +68,16 @@ public class GameplayGUIController : MonoBehaviour
         finishFeedback.gameObject.SetActive(true);
         goToMenuButton.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+        crosshair.gameObject.SetActive(false);
     }
 
     public void SetTimer(int time)
     {
         timeText.text = $"{time.ToString()}";
+    }
+
+    public void ShowCrosshair()
+    {
+        crosshair.gameObject.SetActive(true);
     }
 }

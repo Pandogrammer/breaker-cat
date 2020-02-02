@@ -34,6 +34,7 @@ public class GameState : MonoBehaviour
         PlayGameMusic();
         gameplayGUI.Setup(objects.Count, (int)doomsday);
         playing = true;
+        gameplayGUI.ShowCrosshair();
         gameplayGUI.gameObject.SetActive(true);
     }
 
