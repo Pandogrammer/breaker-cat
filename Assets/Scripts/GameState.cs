@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
@@ -13,10 +12,13 @@ public class GameState : MonoBehaviour
     private List<BreakableObject> objects;
     private int score;
     private bool playing;
+    private MusicGameController musicGameControllerController;
+
 
     void Awake()
     {
         StartButtonClicked();
+        GetIntroMusicGame();
         instantiator.OnObjectsInstantiate += SubscribeObjects;
         dog.OnGameStarted += StartGame;
     }
@@ -29,6 +31,7 @@ public class GameState : MonoBehaviour
 
     private void StartGame()
     {
+        PlayGameMusic();
         gameplayGUI.Setup(objects.Count, (int)doomsday);
         playing = true;
         gameplayGUI.gameObject.SetActive(true);
@@ -86,5 +89,16 @@ public class GameState : MonoBehaviour
     {
         score++;
         gameplayGUI.SetScore(score);
+    }
+    
+    private void GetIntroMusicGame()
+    {
+        musicGameControllerController = FindObjectOfType<MusicGameController>();
+        musicGameControllerController.SetAudioSource(FindObjectOfType<AudioSource>());
+    }
+
+    private void PlayGameMusic()
+    {
+        musicGameControllerController.PlayGameMusic();
     }
 }

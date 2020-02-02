@@ -7,7 +7,7 @@ public class MenuScreenController : MonoBehaviour
 {
     private readonly string scene = "CinematicScene";
     [SerializeField] private Button playButton;
-    [SerializeField] private IntroMusicGame introMusicGame;
+    [SerializeField] private MusicGameController musicGameController;
     [SerializeField] private Button creditsButton;
     [SerializeField] private Canvas creditsScreen;
     [SerializeField] private Button canvasClick;
@@ -15,7 +15,7 @@ public class MenuScreenController : MonoBehaviour
 
     private void Awake()
     {
-        introMusicGame.PlayMusic += PlayMusic;
+        musicGameController.PlayMusic += PlayMusic;
         playButton.onClick.AddListener(StartGame);
         creditsButton.onClick.AddListener(ShowCredits);
         canvasClick.onClick.AddListener(HideCredits);
@@ -33,7 +33,7 @@ public class MenuScreenController : MonoBehaviour
 
     private void PlayMusic()
     {
-        introMusicGame.Play();
+        musicGameController.Play();
     }
 
     private void StartGame()
