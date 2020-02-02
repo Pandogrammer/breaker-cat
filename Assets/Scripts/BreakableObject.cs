@@ -40,8 +40,11 @@ public class BreakableObject : MonoBehaviour
             brokenObject.healthyObject.tag = "OnStartingPosition";
             brokenObject.tag = "OnStartingPosition";
             var rigidBody = brokenObject.healthyObject.GetComponent<Rigidbody>();
-            rigidBody.freezeRotation = true;        
-            rigidBody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
+            rigidBody.constraints = RigidbodyConstraints.FreezePositionZ 
+                                    | RigidbodyConstraints.FreezePositionX
+                                    | RigidbodyConstraints.FreezeRotationX
+                                    | RigidbodyConstraints.FreezeRotationY
+                                    | RigidbodyConstraints.FreezeRotationZ;
 
         }
     }
