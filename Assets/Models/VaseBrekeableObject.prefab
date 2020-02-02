@@ -755,6 +755,7 @@ MonoBehaviour:
   smoke: {fileID: 8793428915368991338}
   brokenPieces: {fileID: 7411354262575385278}
   state: 4
+  crashSound: {fileID: 8300000, guid: 52d8246ef635148d8b51477860d67245, type: 3}
 --- !u!1 &7585627634852154861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,15 +1184,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32a47722c3a20d244b1c05de4a435358, type: 3}
---- !u!1 &8793428915368991338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7716745769513223657, guid: 32a47722c3a20d244b1c05de4a435358,
-    type: 3}
-  m_PrefabInstance: {fileID: 1233962547399499651}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8793428915368494666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7716745769512999369, guid: 32a47722c3a20d244b1c05de4a435358,
+    type: 3}
+  m_PrefabInstance: {fileID: 1233962547399499651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8793428915368991338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7716745769513223657, guid: 32a47722c3a20d244b1c05de4a435358,
     type: 3}
   m_PrefabInstance: {fileID: 1233962547399499651}
   m_PrefabAsset: {fileID: 0}

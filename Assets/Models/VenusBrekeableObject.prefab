@@ -305,6 +305,7 @@ MonoBehaviour:
   smoke: {fileID: 8793428915368991338}
   brokenPieces: {fileID: 4771078464009500908}
   state: 4
+  crashSound: {fileID: 8300000, guid: 52d8246ef635148d8b51477860d67245, type: 3}
 --- !u!1001 &1233962547399499651
 PrefabInstance:
   m_ObjectHideFlags: 0
