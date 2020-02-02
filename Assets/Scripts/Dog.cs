@@ -26,5 +26,6 @@ public class Dog : MonoBehaviour
         mouseLook.enabled = false;
         movement.enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

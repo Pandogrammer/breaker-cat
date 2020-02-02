@@ -3,12 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class CinematicExit : StateMachineBehaviour
 {
-    private readonly string scene = "MovementScene";
+    private readonly string scene = "Level";
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (Input.GetButtonDown("Fire1"))
             SceneManager.LoadScene(scene);
     }
-
-   
 }
