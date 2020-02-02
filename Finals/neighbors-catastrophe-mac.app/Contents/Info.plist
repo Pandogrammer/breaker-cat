@@ -10,7 +10,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>breaker-cat</string>
+	<string>neighbors-catastrophe-mac</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Unity Player version 2018.4.4f1 (5440768ff61c). (c) 2019 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
