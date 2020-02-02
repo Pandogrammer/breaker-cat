@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,8 +9,14 @@ public class GameplayGUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private Text timeText;
     [SerializeField] private GameObject restartPanel; 
+    [SerializeField] private GameObject finishFeedback; 
     [SerializeField] private Button restartButton; 
     [SerializeField] private Button goToMenuButton;
+    [SerializeField] private RawImage goodBoy;
+    [SerializeField] private RawImage badBoy;
+    [SerializeField] private GameObject timer;
+    [SerializeField] private GameObject targetScore;
+    
     private int objectCount;
 
     private void Awake()
@@ -47,21 +49,23 @@ public class GameplayGUIController : MonoBehaviour
 
     public void ShowWin()
     {
-        PresentEndGame("YOU WIN!");
+        goodBoy.gameObject.SetActive(true);
+        PresentEndGame();
     }
 
     public void ShowLose()
     {
-        PresentEndGame("YOU LOSE :c");
+        goodBoy.gameObject.SetActive(true);
+        PresentEndGame();
     }
 
-    private void PresentEndGame(string endMessage)
+    private void PresentEndGame()
     {
-        timeText.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
-        finishText.text = endMessage;
-        finishText.gameObject.SetActive(true);
-        restartPanel.SetActive(true);
+        timer.gameObject.SetActive(false);
+        targetScore.gameObject.SetActive(false);
+        finishFeedback.gameObject.SetActive(true);
+        goToMenuButton.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
     }
 
     public void SetTimer(int time)
