@@ -7,7 +7,8 @@ public class PieceCollection : MonoBehaviour
     [SerializeField] private float rayLength = 0.1f;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private float radius = 1f;
-    private float distance;
+    [SerializeField] private float velocity = 4f;
+    [SerializeField] private float distance = 0.5f;
     private Rigidbody pieceBody;
     private bool holding;
 
@@ -19,7 +20,7 @@ public class PieceCollection : MonoBehaviour
             holding = false;
             return;
         }
-            
+           
         RaycastHit hit;
         var fwd = transform.TransformDirection(Vector3.forward);
 
@@ -30,7 +31,6 @@ public class PieceCollection : MonoBehaviour
             {
                 holding = true;
                 pieceBody = piece.GetComponent<Rigidbody>();
-                distance = (hit.point - piece.transform.position).magnitude;
             }
         }
         if(holding)
@@ -44,7 +44,10 @@ public class PieceCollection : MonoBehaviour
         
         pieceBody.velocity = Vector3.zero;
         pieceBody.angularVelocity = Vector3.zero;
-        pieceBody.MovePosition(transform.position + transform.forward * (distance + 1.5f));
+        var newPosition = Vector3.Slerp(pieceBody.transform.position,
+            transform.position + transform.forward * (distance), 
+            Time.deltaTime* velocity);
+        pieceBody.MovePosition(newPosition);
         pieceBody.MoveRotation(new Quaternion(0, transform.rotation.y, 0, transform.rotation.w).normalized);
     }
 }
