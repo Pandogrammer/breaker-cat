@@ -7,12 +7,28 @@ namespace DefaultNamespace
     {
         private AudioSource audioSource;
         private static bool AudioBegin;
-
         public event Action PlayMusic;
         public event Action StopMusic;
         
         [SerializeField] private AudioClip menuMusic;
+        
+        private static IntroMusicGame instance;
 
+        void Awake()
+        {
+            CreateAudioSource();
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(instance);
+            DontDestroyOnLoad(audioSource);
+        }
+
+        
         private void Start()
         {
             PlayMusic();
@@ -20,8 +36,6 @@ namespace DefaultNamespace
 
         public void Play()
         {
-            CreateAudioSource();
-
             audioSource.clip = menuMusic;
             audioSource.Play();
         }
@@ -31,11 +45,6 @@ namespace DefaultNamespace
             var newAudioSource = new GameObject("AudioSource").AddComponent<AudioSource>();
             newAudioSource.loop = true;
             audioSource = newAudioSource;
-        
-            if (!AudioBegin) {
-                DontDestroyOnLoad(gameObject);
-                AudioBegin = true;
-            }
-        }
+        }   
     }
 }
