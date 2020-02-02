@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -577,6 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuMusic: {fileID: 8300000, guid: 408d97456a03cce499194fce070761fc, type: 3}
   gameMusic: {fileID: 8300000, guid: cbd01afb94818d6409cb34b6badb6ee6, type: 3}
+  whistleSound: {fileID: 8300000, guid: 1243c3680a048461ead98df9432e9400, type: 3}
 --- !u!4 &1614647542
 Transform:
   m_ObjectHideFlags: 0

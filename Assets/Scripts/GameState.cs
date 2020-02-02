@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -60,7 +61,7 @@ public class GameState : MonoBehaviour
             dog.DisableControls();
             playing = false;
             gameplayGUI.ShowLose();
-            musicGameControllerController.PlayMenuMusic();
+            PlayMenuMusic();
         }
     }
 
@@ -71,7 +72,7 @@ public class GameState : MonoBehaviour
             dog.DisableControls();
             playing = false;
             gameplayGUI.ShowWin(Mathf.FloorToInt(doomsday));
-            musicGameControllerController.PlayMenuMusic();
+            PlayMenuMusic();
         }
     }
 
@@ -93,15 +94,34 @@ public class GameState : MonoBehaviour
         score++;
         gameplayGUI.SetScore(score);
     }
-    
+
     private void GetIntroMusicGame()
     {
         musicGameControllerController = FindObjectOfType<MusicGameController>();
-        musicGameControllerController.SetAudioSource(FindObjectOfType<AudioSource>());
+        //musicGameControllerController.SetAudioSource(FindObjectOfType<AudioSource>());
     }
 
     private void PlayGameMusic()
     {
+        StartCoroutine(WaitForGameMusic());
+        musicGameControllerController.PlayWhistle();
+    }
+
+    private void PlayMenuMusic()
+    {
+        StartCoroutine(WaitForMenuMusic());
+        musicGameControllerController.PlayWhistle();
+    }
+
+    IEnumerator WaitForMenuMusic()
+    {
+        yield return new WaitForSeconds(2);
+        musicGameControllerController.PlayMenuMusic();
+    }
+    
+    IEnumerator WaitForGameMusic()
+    {
+        yield return new WaitForSeconds(2);
         musicGameControllerController.PlayGameMusic();
     }
 }
