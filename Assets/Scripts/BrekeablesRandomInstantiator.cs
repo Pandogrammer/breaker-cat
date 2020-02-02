@@ -10,6 +10,7 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
     private BrekeableInstantiatorPlaceholder[] instantiators;
     public List<BreakableObject> prefabs;
     public CatTeleporter catTeleporter;
+    private int prefabNumber=0;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class BrekeablesRandomInstantiator : MonoBehaviour
 
     private BreakableObject InstantiateInPosition(BrekeableInstantiatorPlaceholder instance)
     {
-        var prefab = prefabs.First();
+        var prefab = prefabs[prefabNumber++%prefabs.Count];
         var pos = instance.transform.position;
         return GameObject.Instantiate<BreakableObject>(prefab, pos, Quaternion.identity, transform);
     }
