@@ -14,7 +14,7 @@ public class Dog : MonoBehaviour
 
     public void Update()
     {
-        if (animator.GetBool("Started"))
+        if (animator.GetBool("Started") && animator.enabled)
         {
             animator.enabled = false;
             OnGameStarted();
